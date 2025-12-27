@@ -1,4 +1,11 @@
-/* 1. Reset + global styles */
+:root {
+  --bg-main: #dbe7f1;
+  --card-bg: #ffffff;
+  --text-dark: #1f314f;
+  --text-light: #7b879d;
+  --blue: #2c7dfa;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +13,10 @@
 }
 
 body {
-  background-color: #dbe7f1;
-  font-family: Arial, sans-serif;
+  background-color: var(--bg-main);
+  font-family: 'Outfit', sans-serif;
 }
 
-/* 2. Page layout */
 .container {
   min-height: 100vh;
   display: flex;
@@ -18,38 +24,35 @@ body {
   align-items: center;
 }
 
-/* 3. Card */
 .card {
-  background: #fff;
-  width: 1440px;
-  padding: 16px;
-  border-radius: 16px;
+  background: var(--card-bg);
+  width: min(20rem, 90%);
+  padding: 1.25rem;
+  border-radius: 1rem;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.625rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
-/* 4. QR image box */
 .qr-box {
-  background: #2c7dfa;
-  padding: 16px;
-  border-radius: 12px;
-  margin-bottom: 20px;
+  background: var(--blue);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-block-end: 1.25rem;
 }
 
 .qr-box img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
-/* 5. Text styles */
 .card h1 {
-  font-size: 18px;
-  color: #1f314f;
-  margin-bottom: 12px;
+  font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+  color: var(--text-dark);
+  margin-block-end: 0.75rem;
 }
 
 .card p {
-  font-size: 14px;
-  color: #7b879d;
+  font-size: 0.875rem;
+  color: var(--text-light);
   line-height: 1.5;
 }
